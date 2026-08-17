@@ -10,7 +10,12 @@ type: software
 version: 1.0.0
 date-released: "2026-08-17"
 license: MIT
+doi: 10.5281/zenodo.21981329
 repository-code: "https://github.com/thefledgedhurricane/regimebench"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21981329
+    description: Archived v1.0.0 release, the exact code that produced the reported results
 keywords:
   - unsupervised learning
   - cluster validity

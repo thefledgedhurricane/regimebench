@@ -10,6 +10,10 @@ century of US daily returns.
 Accompanying article: *Boundary Pinning in Cluster-Count Selection: A Controlled Benchmark
 on Persistent, Heavy-Tailed Time Series* (under review, *Array*).
 
+Archived release: [10.5281/zenodo.21981329](https://doi.org/10.5281/zenodo.21981329) — the
+exact code that produced every reported result. `CITATION.cff` carries the citation
+metadata; GitHub's "Cite this repository" reads it.
+
 ---
 
 ## What the benchmark reports
