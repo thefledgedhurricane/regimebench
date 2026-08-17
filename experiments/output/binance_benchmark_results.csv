@@ -1,0 +1,2 @@
+Symbol,Year,Month,N_Raw_Klines,N_Subsampled,Silhouette_k_hat,DaviesBouldin_k_hat,BIC_k_hat,AIC_k_hat,ICL_k_hat,GapStatistic_k_hat
+BTCUSDT,2024,1,44638,4464,2,5,5,6,2,1

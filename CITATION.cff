@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the accompanying article."
+title: regimebench
+abstract: >-
+  A controlled benchmark for regime-count selection on financial time series,
+  testing Silhouette, Davies-Bouldin, Calinski-Harabasz, AIC, BIC, BIC(N_eff),
+  ICL, the Gap Statistic and Prediction Strength against known ground truth,
+  four null controls, two positive controls, and a century of US daily returns.
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/thefledgedhurricane/regimebench"
+keywords:
+  - unsupervised learning
+  - cluster validity
+  - model selection
+  - benchmarking
+  - reproducibility
+  - time-series clustering
+  - regime detection
+authors:
+  - family-names: Annaki
+    given-names: Ihababdelbasset
+    email: annaki.ihababdelbasset@ump.ac.ma
+    orcid: "https://orcid.org/0000-0001-5719-7332"
+    affiliation: "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+  - family-names: Zammouri
+    given-names: Yassine
+    affiliation: "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+  - family-names: Haja
+    given-names: Zakaria
+    affiliation: "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+  - family-names: Zarrouk
+    given-names: Yassine
+    affiliation: "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+  - family-names: Serji
+    given-names: Abdelilah
+    affiliation: "Faculte des Sciences d'Oujda (FSO), Universite Mohammed Premier, Oujda, Morocco"
+  - family-names: Rahmoun
+    given-names: Noureddine
+    affiliation: "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+  - family-names: Rahmoune
+    given-names: Mohammed
+    affiliation: "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+preferred-citation:
+  type: article
+  title: "Boundary Pinning in Cluster-Count Selection: A Controlled Benchmark on Persistent, Heavy-Tailed Time Series"
+  journal: Array
+  year: 2026
+  status: submitted
+  authors:
+    - family-names: Annaki
+      given-names: Ihababdelbasset
+      orcid: "https://orcid.org/0000-0001-5719-7332"
+    - family-names: Zammouri
+      given-names: Yassine
+    - family-names: Haja
+      given-names: Zakaria
+    - family-names: Zarrouk
+      given-names: Yassine
+    - family-names: Serji
+      given-names: Abdelilah
+    - family-names: Rahmoun
+      given-names: Noureddine
+    - family-names: Rahmoune
+      given-names: Mohammed

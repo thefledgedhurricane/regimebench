@@ -1,0 +1,63 @@
+{
+  "fama_french_daily": {
+    "dataset_name": "fama_french_daily",
+    "source_url": "F-F_Research_Data_Factors_daily (Dartmouth)",
+    "timestamp": "2026-08-11T12:37:39.187523+00:00",
+    "rows": 26274,
+    "columns": [
+      "Returns",
+      "Mkt_RF",
+      "SMB",
+      "HML",
+      "RF"
+    ],
+    "date_range": [
+      "1926-07-01 00:00:00",
+      "2026-06-30 00:00:00"
+    ],
+    "sha256": "c7fb6de01124a93ed0af520583026ca5de6b85e64192788b176169014aae0c8a",
+    "raw_cache_file": "data/raw/fama_french_daily.csv"
+  },
+  "fred_usrec": {
+    "dataset_name": "fred_usrec",
+    "source_url": "FRED API (USREC)",
+    "timestamp": "2026-08-11T13:29:54.150175+00:00",
+    "rows": 2060,
+    "columns": [
+      "USREC"
+    ],
+    "date_range": [
+      "1854-12-01 00:00:00",
+      "2026-07-01 00:00:00"
+    ],
+    "sha256": "3a3718651dbff7e66465bc2a40a6c33185c127b3c0a9e0d1ed18c459a92eb085",
+    "raw_cache_file": "data/raw/fred_usrec.csv"
+  },
+  "binance_btcusdt_2024_01": {
+    "dataset_name": "binance_btcusdt_2024_01",
+    "source_url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2024-01.zip",
+    "timestamp": "2026-08-14T11:58:06.452967+00:00",
+    "rows": 44638,
+    "columns": [
+      "Open",
+      "High",
+      "Low",
+      "Close",
+      "Volume",
+      "Close_Time",
+      "Quote_Asset_Volume",
+      "Number_of_Trades",
+      "Taker_Buy_Base_Asset_Volume",
+      "Taker_Buy_Quote_Asset_Volume",
+      "Ignore",
+      "Returns",
+      "Realized_Vol_60m"
+    ],
+    "date_range": [
+      "2024-01-01 00:02:00",
+      "2024-01-31 23:59:00"
+    ],
+    "sha256": "40b78258091a468f8756843f207f5913eafc1d6e756c40a78711320d93fa5e75",
+    "raw_cache_file": "data/raw/binance_btcusdt_2024_01.csv"
+  }
+}

@@ -1,0 +1,32 @@
+# Factor grid configuration.
+#
+# Every key here is read by experiments/run_pilot_grid.py. If you add a key, wire it
+# through -- a config entry that is silently ignored is worse than no config at all.
+
+experiment_name: "factor_grid"
+random_seed: 42
+sample_size_T: 5000
+# 20 replications x 18 cells = 360 series. Raised from 5 so the factor grid is replicated
+# on the same order as every other experiment in the suite (20-200); at 5 the realized-
+# separation cells in the manuscript carried +/-20-25% relative confidence.
+replications_per_cell: 20
+
+# Candidate regime counts. The geometric indices (Silhouette, Davies-Bouldin,
+# Calinski-Harabasz) are undefined at k=1 and are scored on k >= 2. The model-based
+# criteria are scored on BOTH k >= 2 (for comparability) and k >= 1 (recorded in the
+# *_k1 columns), because a one-component GMM/HMM is well defined and excluding it is a
+# design choice, not a structural limit.
+k_candidates: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+factor_grid:
+  generators: ["ms_garch", "hmm_t"]
+  true_k: [2, 3, 4]
+  persistence: [0.90, 0.95, 0.99]
+  # Volatility scale per regime, indexed by k. These are the *intended* separations;
+  # run_pilot_grid.py records the realized ratio each series actually achieves, which
+  # GARCH persistence and finite samples make narrower.
+  volatility_ratios:
+    - [1.0, 2.5]
+    - [1.0, 2.5, 5.0]
+    - [1.0, 2.5, 5.0, 10.0]
+  df: 5.0

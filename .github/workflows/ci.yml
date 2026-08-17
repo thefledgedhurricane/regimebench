@@ -1,0 +1,42 @@
+name: ci
+
+# The repository is a cited artifact, so the two things a reader is invited to check --
+# that the tests pass and that every number in the article still matches its source CSV --
+# are checked on every push rather than only on the author's machine.
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dependencies
+        run: uv sync --extra dev
+
+      - name: Unit tests
+        run: uv run python -m pytest -q
+
+      - name: Verifier self-test
+        run: uv run python tools/verify_manuscript.py --self-test
+
+      - name: Manuscript integrity
+        # Parses every number out of manuscript_array.tex and asserts it against the CSV
+        # in experiments/output/ that produced it. Exits non-zero on drift -- and, until
+        # the Zenodo DOI is minted and substituted, on the placeholder DOI.
+        run: uv run python tools/verify_manuscript.py

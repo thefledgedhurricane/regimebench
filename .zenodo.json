@@ -1,0 +1,49 @@
+{
+  "title": "regimebench: Boundary Pinning in Cluster-Count Selection -- A Controlled Benchmark",
+  "description": "<p>A controlled benchmark for cluster-count selection on time series, using persistent heavy-tailed volatility processes as a deliberately hard case. Benchmarks Silhouette, Davies-Bouldin, Calinski-Harabasz, AIC, BIC, BIC(N_eff), ICL, the Gap Statistic and Prediction Strength against known ground truth, four null controls, two positive controls (one on the latent state variable, one running the identical criterion code on well-separated i.i.d. Gaussian clusters), and a century of US daily returns.</p><p>Every table and figure in the accompanying article regenerates from a single entry point (<code>run_all.py</code>), a seventeen-step pipeline whose final step is <code>tools/verify_manuscript.py</code>: it parses each reported number out of the LaTeX source and asserts it against the artifact that produced it, failing on drift. A <code>--self-test</code> flag confirms the verifier detects injected corruption.</p><p><strong>Data.</strong> Synthetic series are regenerated bit-for-bit from a seed recorded in <code>experiments/config/</code>. Raw third-party payloads (Ken French Data Library, FRED, Binance) are not redistributed here; the connectors fetch them from source on first run and <code>data/provenance.json</code> records each payload's source URL, retrieval timestamp, row count, date range and SHA-256, so a reader verifies byte-for-byte.</p>",
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Annaki, Ihababdelbasset",
+      "affiliation": "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco",
+      "orcid": "0000-0001-5719-7332"
+    },
+    {
+      "name": "Zammouri, Yassine",
+      "affiliation": "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+    },
+    {
+      "name": "Haja, Zakaria",
+      "affiliation": "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+    },
+    {
+      "name": "Zarrouk, Yassine",
+      "affiliation": "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+    },
+    {
+      "name": "Serji, Abdelilah",
+      "affiliation": "Faculte des Sciences d'Oujda (FSO), Universite Mohammed Premier, Oujda, Morocco"
+    },
+    {
+      "name": "Rahmoun, Noureddine",
+      "affiliation": "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+    },
+    {
+      "name": "Rahmoune, Mohammed",
+      "affiliation": "Laboratoire de Recherche en Sciences Appliquees (LaRSA), ENSAO, Universite Mohammed Premier, Oujda, Morocco"
+    }
+  ],
+  "keywords": [
+    "unsupervised learning",
+    "cluster validity",
+    "model selection",
+    "benchmarking",
+    "reproducibility",
+    "time-series clustering",
+    "regime detection"
+  ],
+  "language": "eng"
+}

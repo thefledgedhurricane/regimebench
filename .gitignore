@@ -1,0 +1,46 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+dist/
+build/
+*.aux
+*.log
+*.out
+*.spl
+
+dist/
+
+# --- Third-party payloads: cached locally, never redistributed ---------------
+# Ken French Data Library, FRED and Binance payloads whose redistribution terms
+# are not ours to grant. data/provenance.json keeps each source URL, retrieval
+# timestamp, row count, date range and SHA-256, so a reader re-fetches and
+# verifies byte-for-byte; the connectors recreate this directory on first run.
+data/raw/
+
+# --- Kept local: internal working notes, not artifacts -----------------------
+TODO.md
+SUBMISSION.md
+AUDIT_*.md
+
+# --- Manuscript: NEVER published here ----------------------------------------
+# This repository is the benchmark, not the paper. The article source, its build
+# products and the Elsevier submission package live alongside it on disk and are
+# never distributed. tools/verify_manuscript.py detects their absence and skips.
+#
+# Deliberately broader than the one directory that exists today: the article must
+# not reach this repository under any name, in any location.
+manuscript/
+manuscript*/
+paper/
+paper*/
+*.tex
+*.bib
+*.bbl
+*.cls
+*.sty
+cover_letter*
+highlights.txt
+# Not *.pdf -- experiments/output/ ships sixteen tracked figure PDFs.
