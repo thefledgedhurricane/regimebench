@@ -8,6 +8,7 @@ abstract: >-
   four null controls, two positive controls, and a century of US daily returns.
 type: software
 version: 1.0.0
+date-released: "2026-08-17"
 license: MIT
 repository-code: "https://github.com/thefledgedhurricane/regimebench"
 keywords:
